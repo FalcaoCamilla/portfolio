@@ -1,0 +1,253 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: rgb(255, 255, 255);
+}
+
+header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    box-shadow: 1px 2px 9px 1px #5df6a5;
+    margin-bottom: 60px;
+}
+
+header ul{
+    display: flex;
+    border: 1.5px dashed #5df6a5;
+    box-shadow: 1px 1px 9px 1px #5df6a5;
+}
+
+header ul li{
+    padding: 10px;
+}
+
+header img{
+    max-width: 10%;
+    border-radius: 50px;
+}
+
+body{
+    background: url(./imagens/Cyber-Wallpaper-4k.png) no-repeat center center fixed;
+    background-size: cover;
+    /*background: linear-gradient(180deg, #e1eec3, #f05053)*/
+}
+
+ul{
+    list-style: none;
+    font-family: 'Signika Negative', sans-serif;
+    font-size: 20px;
+}
+
+a{
+    text-decoration: none;
+    transition: 300ms;
+}
+
+header ul li a:hover{
+    color: rgb(163, 163, 163);
+    text-decoration:underline 1px rgba(163, 163, 163, 0.795);
+}
+
+.container .name h1{
+    font-family: 'Signika Negative', sans-serif;
+    font-size: 55px;
+}
+
+.container .name h5{
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    color: #5df6a5;
+}
+
+#arrow{
+    font-size: 32px;
+    cursor: pointer;
+    animation: piscar 1s steps(5, start) infinite;
+}
+
+@keyframes piscar{
+    to {
+        visibility: hidden;
+    }
+}
+
+#animation{
+    transition: 300ms;
+}
+
+.rotate{
+    transform: rotate(180deg);
+    transition: 300ms;
+}
+
+.active{
+    display: block !important;
+}
+
+.container p{
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    max-width: 700px;
+    margin: 0 auto; /*centraliza*/
+}
+
+.container{
+    text-align: center;
+}
+
+.flex{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.flex div{
+    border: 4px solid rgb(0, 114, 122);
+    border-radius: 5px;
+    margin: 15px;
+    flex-basis: 100%;
+    background-color: rgb(0, 114, 122);
+    max-width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.flex img{
+    width: 100%;
+    display: flex;
+    padding: 3px 0;
+}
+
+.flex p{
+    width: 90%;
+    color:rgb(255, 255, 255);
+    font-size: 9px;
+    font-weight: 1000;
+    margin: 5px 0px;
+}
+
+.flex .git{
+    width: 100%;
+}
+
+.flex a{
+    text-decoration: none;
+    width: 9%;
+}
+
+h2{
+    font-family: 'Poppins', sans-serif;
+    font-size: 30px;
+    margin-top: 40px;
+    color: #5df6a5;
+}
+
+.flex-skill{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex-skill img{
+    display: flex;
+    max-width: 100px;
+    display: flex;
+    border-radius: 50%;
+    opacity: 0.8;
+    margin: 8px 12px 0 0;
+    box-shadow: 1px 0px 9px 1px #5df6a5;
+    transition: 2s;
+}
+
+.flex-skill img:hover{
+    transform: rotate(360deg);
+}
+
+.form{
+    width: 40%; /*40% da div pai (container)*/
+    margin: 80px auto;
+    border: thick double rgb(0, 114, 122);
+    padding: 25px;
+}
+
+.form input{
+    width: 50%; /*50% da largura do form*/
+    border-radius: 5px 0px 0px 5px;
+    line-height: 2.5;
+    margin-top: 5px;
+    padding-left: 10px;
+    border-style: none;
+}
+
+.form button{
+    width: 15%;
+    border-radius: 0px 5px 5px 0px;
+    border-style: none;
+    line-height: 2.5;
+    background-color: rgb(0, 114, 122);
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    transition: 500ms;
+    margin-left: -5px;
+}
+
+.form button:hover{
+    background-color: rgb(255, 255, 255);
+    color:rgb(0, 114, 122);
+}
+
+@media only screen and (max-width: 768px){
+    .container .name h1{
+        font-size: 30px;
+    }
+    .container .name h5{
+        font-size: 10px;
+    }
+    #about p{
+        max-width: 80%;
+        font-size: 12px;
+        text-align: justify;
+    }
+    h2{
+        font-size: 24px;
+    }
+    .flex div{
+        max-width: 100%;
+    }
+    .form{
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 480px){
+    /*header img{
+        max-width: 100%;
+    }*/
+    .container .name h1{
+        font-size: 30px;
+    }
+    .container .name h5{
+        font-size: 10px;
+    }
+    #about p{
+        max-width: 80%;
+        font-size: 12px;
+        text-align: justify;
+    }
+    h2{
+        font-size: 24px;
+    }
+    .flex div{
+        max-width: 100%;
+    }
+    .form{
+        width: 100%;
+        padding: 10px;
+    }
+}
+

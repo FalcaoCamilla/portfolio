@@ -4,17 +4,94 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.1/css/all.css" integrity="sha384-/frq1SRXYH/bSyou/HUp/hib7RVN1TawQYja658FEOodR/FQBKVqT9Ol+Oz3Olq5" crossorigin="anonymous">
+    <link href="./style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@700&family=Signika+Negative:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+
     <title>Camilla Falcão</title>
 </head>
 <body>
     <header>
         <div>
-            <img src='/portfolio/imagens/milla.jpeg' alt="camilla falcão">
+            <img src='./imagens/milla.jpeg' alt="camilla falcão">
         </div>
+        <ul>
+            <li>
+                <a target="_blank" href="https://github.com/FalcaoCamilla">Github</a>
+            </li>
+            <li>
+                <a target="_blank" href="https://www.linkedin.com/in/camilla-falcão-83648b235/">Linkedin</a>
+            </li>
+            <li>
+                <a target="_blank" href="mailto:millafalcao.acad@gmail.com">Email</a>                
+            </li>
+            <li>
+                <a target="_blank" href="https://wa.me/84999035870">Whatsapp</a>                
+            </li>
+        </ul>
     </header>
     <main>
+        <section class="container">
+            <div class="name">
+                <h1>Camilla Falcão</h1>
+                <h5>Estudante de Informática no IFRN | Dev Front-End em formação</h5>
+            </div>
 
+            <div onclick="displayAbout()" id="arrow">
+                <i id="animation" class="fa-solid fa-caret-down"></i>
+            </div>
+
+            <div style="display: none" id="about">
+                <p>
+                    Criativa, curiosa, comunicativa e dedicada! Sou uma Dev Front-End em formação, entusiasta em CSS, HTML, JavaScript e Banco de Dados.
+                    Cursando Informática pelo Instituto Federal do Rio Grande do Norte, com índice de rendimento acadêmico acima de 90.
+                </p>
+            </div>
+
+            <h2>Projetos</h2>
+            <div class="flex">
+                <div>
+                    <img src="./imagens/raiz-aventura.png">
+                    <a href="https://github.com/FalcaoCamilla/raiz-aventura.git" target="blank"><img src="./imagens/github.png" class="git"></a>
+                    <p>Raiz Aventura - Turismo do Rio Grande do Norte</p>
+                </div>
+                <div>
+                    <img src="./imagens/suptec.png">
+                    <a href="https://github.com/FalcaoCamilla/suptec.git" target="blank"><img src="./imagens/github.png" class="git"></a>
+                    <p>Suptec - Os cursos na área de T.I ofertados em todo Rio Grande do Norte</p>
+                </div>
+            </div>
+
+            <h2>Skills</h2>
+            <div class="flex-skill">
+                <img src="./imagens/1.png">
+                <img src="./imagens/2.png">
+                <img src="./imagens/3.png">
+                <img src="./imagens/4.png">
+                <img src="./imagens/5.png">
+            </div>
+
+            <div class="form">
+                <div>
+                    <p>Deixe seu contato!</p>
+                </div>
+                <form action="">
+                    <input type="text" placeholder="seu melhor email :)">
+                    <button>Enviar</button>
+                </form>
+            </div>
+        </section>
     </main>
+
+    <script>
+        function displayAbout(){
+            var arrow = document.getElementById("animation");
+            arrow.classList.toggle("rotate");
+            var display = document.getElementById("about");
+            display.classList.toggle("active");
+        }
+    </script>
     
 </body>
 </html>
